@@ -9,7 +9,7 @@ import { VersionCheckService} from './version-check.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  locale = 'de';
+  locale = 'en';
 
   constructor(private titleService: Title, private versionCheckService: VersionCheckService) {
     const path: string = location.pathname.toString();
@@ -25,7 +25,7 @@ export class AppComponent {
   }
 
   onLocaleChange(value) {
-    if (value == 'de') {
+    if (value == 'en') {
       window.location.href = '/';
     } else {
       window.location.href = '/' + value + '/';
